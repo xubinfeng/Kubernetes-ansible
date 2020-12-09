@@ -1,0 +1,11 @@
+# PASSWD: 服务器配置及密码统一情况下设置，如果各不相同，需要在hosts配置中加入,按照自己实际情况进行修改
+# ansible_ssh_port: 22
+# ansible_ssh_user: 'root'
+# ansible_ssh_pass: ''
+# ansible_ssh_private_key_file: './ssh_key/k8s_rsa'
+
+
+# 公钥地址，需要批量导入的时候使用,如果不需要复制公钥不要打开会自动跳过
+# 复制前想指定密码确保能登录，复制后可以注释密码采用无密码登录
+# 密钥请使用自己的密钥
+ansible_ssh_public_key_file: 'ssh-key/k8s_rsa.pub'

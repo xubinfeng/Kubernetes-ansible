@@ -1,6 +1,3 @@
-# PASSWD: zhangguanzhang
-ansible_ssh_port: 22
-ansible_ssh_pass: 'zhangguanzhang'
 
 ntp_type: chrony # or ntp
 ntp_servers: 

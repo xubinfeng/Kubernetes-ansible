@@ -1,0 +1,12 @@
+---
+# 公钥地址，需要批量导入的时候使用,如果不需要复制公钥不要打开会自动跳过
+# 复制前想指定密码确保能登录，复制后可以注释密码采用无密码登录
+# 密钥请使用自己的密钥
+# 对应group_vars/vars_login#ansible_ssh_public_key_file: './ssh_key/k8s_rsa.pub'
+
+- hosts: "{{ run | default('Allnode',boolean=true)}}"
+  gather_facts: yes
+  roles:
+    - add_ssh_key
+  tags:
+    - add_ssh_key
